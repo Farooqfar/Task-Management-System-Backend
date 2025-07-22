@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import router from "../../routes/user.route.js";
+import router from "../routes/user.route.js";
 import serverless from "serverless-http";
 const server = express();
 server.use(
@@ -14,6 +14,6 @@ server.use(cookieParser());
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use(express.static("public"));
-server.use("/", router);
+server.use("/userapi", router);
 const handler = serverless(server);
 export { handler as default };
