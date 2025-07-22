@@ -13,5 +13,5 @@ server.use(cookieParser());
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use(express.static("public"));
-server.use(router);
-server.listen(3000);
+server.use("/", router);
+export default server;
