@@ -5,7 +5,7 @@ import router from "./routes/user.route.js";
 const server = express();
 server.use(
   cors({
-    origin: "http://localhost:5173" , "https://taskmanagementsyst.netlify.app",
+    origin: "http://localhost:5173",
     credentials: true
   })
 );

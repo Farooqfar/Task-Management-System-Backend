@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
-mongoose.connect("mongodb://localhost:27017/TaskManagementSystem");
+mongoose.connect(
+  "mongodb+srv://info4895:6DGJNPembVhvJBLW@taskmanagemnetsystem.axxq96s.mongodb.net/TaskManagemnetSystem?retryWrites=true&w=majority"
+);
 const UserSchema = mongoose.Schema({
   fullName: String,
   email: String,
